@@ -1,5 +1,5 @@
 %define module	Date-Manip
-%define version	5.46
+%define version	5.48
 %define release	%mkrel 1
 
 Summary:	%{module} module for Perl
@@ -8,19 +8,12 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL or Artistic
 Group:		Development/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Date/%{module}-%{version}.tar.gz
-Patch0:		DateManip-COT.patch
-Patch1:		DateManip-SORT.patch
 Url:		http://search.cpan.org/dist/%{module}/
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%else
-BuildRequires:	perl
-%endif
-BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildArch:	noarch
+Source:     http://www.cpan.org/modules/by-module/Date/%{module}-%{version}.tar.gz
+Patch0:		DateManip-COT.patch
 Obsoletes:	perl-DateManip < 5.46
-Provides:	perl-DateManip = %{version}-%{release}
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This is a set of routines designed to make any common date/time
@@ -32,7 +25,6 @@ international times are all easily done.
 %prep
 %setup -q -n %{module}-%{version}
 %patch0 -p1 -b .cot
-%patch1 -p0 -b .sort
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
