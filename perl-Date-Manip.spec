@@ -1,6 +1,6 @@
 %define module	Date-Manip
 %define version	5.48
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 Summary:	%{module} module for Perl
 Name:		perl-%{module}
@@ -12,6 +12,7 @@ Url:		http://search.cpan.org/dist/%{module}/
 Source:     http://www.cpan.org/modules/by-module/Date/%{module}-%{version}.tar.gz
 Patch0:		DateManip-COT.patch
 Obsoletes:	perl-DateManip < 5.46
+Provides:	perl-DateManip < 5.46
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
