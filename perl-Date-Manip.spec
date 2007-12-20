@@ -14,6 +14,7 @@ Patch0:		DateManip-COT.patch
 Obsoletes:	perl-DateManip < 5.46
 Provides:	perl-DateManip < 5.46
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This is a set of routines designed to make any common date/time
