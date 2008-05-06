@@ -1,6 +1,6 @@
 %define module	Date-Manip
-%define version	5.48
-%define release	%mkrel 2
+%define version	5.50
+%define release	%mkrel 1
 
 Summary:	%{module} module for Perl
 Name:		perl-%{module}
