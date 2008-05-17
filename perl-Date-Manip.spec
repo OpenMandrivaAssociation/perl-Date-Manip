@@ -1,5 +1,5 @@
 %define module	Date-Manip
-%define version	5.50
+%define version	5.54
 %define release	%mkrel 1
 
 Summary:	%{module} module for Perl
@@ -10,7 +10,7 @@ License:	GPL or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
 Source:     http://www.cpan.org/modules/by-module/Date/%{module}-%{version}.tar.gz
-Patch0:		DateManip-COT.patch
+Patch0:     Date-Manip-5.54-cot.patch
 Obsoletes:	perl-DateManip < 5.46
 Provides:	perl-DateManip < 5.46
 BuildArch:	noarch
@@ -25,7 +25,7 @@ international times are all easily done.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p1 -b .cot
+%patch0 -p 1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
