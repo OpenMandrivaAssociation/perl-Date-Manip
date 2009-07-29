@@ -1,20 +1,21 @@
-%define module	Date-Manip
-%define version	5.54
-%define release	%mkrel 3
+%define upstream_name	 Date-Manip
+%define upstream_version 5.54
 
-Summary:	%{module} module for Perl
-Name:		perl-%{module}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	%{module} upstream_name for Perl
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}/
-Source:     http://www.cpan.org/modules/by-module/Date/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/Date/%{upstream_name}-%{upstream_version}.tar.gz
 Patch0:     Date-Manip-5.54-cot.patch
+
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 Obsoletes:	perl-DateManip < 5.46
 Provides:	perl-DateManip < 5.46
-BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This is a set of routines designed to make any common date/time
@@ -22,9 +23,8 @@ manipulation easy to do. Operations such as comparing two times,
 calculating a time a given amount of time from another, or parsing
 international times are all easily done.
 
-
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 %patch0 -p 1
 
 %build
@@ -46,4 +46,3 @@ rm -rf %{buildroot}
 %doc HISTORY INSTALL README TODO
 %{_mandir}/man*/*
 %{perl_vendorlib}/Date
-
