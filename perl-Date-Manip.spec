@@ -1,5 +1,5 @@
 %define upstream_name	 Date-Manip
-%define upstream_version 5.54
+%define upstream_version 6.04
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -10,7 +10,7 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:    http://www.cpan.org/modules/by-module/Date/%{upstream_name}-%{upstream_version}.tar.gz
-Patch0:     Date-Manip-5.54-cot.patch
+# Patch0:     Date-Manip-5.54-cot.patch
 
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
@@ -25,7 +25,7 @@ international times are all easily done.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-%patch0 -p 1
+# %patch0 -p 1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,6 +43,6 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc HISTORY INSTALL README TODO
+%doc HISTORY INSTALL README
 %{_mandir}/man*/*
 %{perl_vendorlib}/Date
