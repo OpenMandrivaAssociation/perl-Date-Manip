@@ -10,10 +10,14 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:    http://www.cpan.org/modules/by-module/Date/%{upstream_name}-%{upstream_version}.tar.gz
-# Patch0:     Date-Manip-5.54-cot.patch
+
+BuildRequires: perl(Test::Pod)
+BuildRequires: perl(Test::PodCoverage)
+BuildRequires: perl(YAML::Syck)
 
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+
 Obsoletes:	perl-DateManip < 5.46
 Provides:	perl-DateManip < 5.46
 
@@ -25,14 +29,13 @@ international times are all easily done.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-# %patch0 -p 1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%__make
+%make
 
 %check
-%__make test
+%make test
 
 %clean
 rm -rf %{buildroot}
