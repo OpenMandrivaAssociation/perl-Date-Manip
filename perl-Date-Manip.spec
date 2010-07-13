@@ -11,6 +11,9 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:    http://www.cpan.org/modules/by-module/Date/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires: perl(Test::Inter)
+BuildRequires: perl(Test::Pod)
+BuildRequires: perl(Test::Pod::Coverage)
 BuildRequires: perl(YAML::Syck)
 
 BuildArch:	noarch
