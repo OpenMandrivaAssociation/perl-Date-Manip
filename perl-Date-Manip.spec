@@ -5,7 +5,7 @@ Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 1
 
-Summary:	%{module} upstream_name for Perl
+Summary:	%{upstream_name} upstream_name for Perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
