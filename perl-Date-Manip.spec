@@ -15,6 +15,7 @@ BuildRequires: perl(Test::Inter)
 BuildRequires: perl(Test::Pod)
 BuildRequires: perl(Test::Pod::Coverage)
 BuildRequires: perl(YAML::Syck)
+BuildRequires: perl(Module::Build)
 
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
