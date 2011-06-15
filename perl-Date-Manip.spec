@@ -1,5 +1,5 @@
 %define upstream_name	 Date-Manip
-%define upstream_version 6.23
+%define upstream_version 6.24
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
