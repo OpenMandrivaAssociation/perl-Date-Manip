@@ -49,6 +49,7 @@ international times are all easily done.
 %doc HISTORY INSTALL README
 %{_mandir}/man*/*
 %{perl_vendorlib}/Date
+%{_bindir}/*
 
 
 
