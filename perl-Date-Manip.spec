@@ -46,7 +46,7 @@ international times are all easily done.
 %clean
 
 %files
-%doc HISTORY INSTALL README
+%doc INSTALL README
 %{_mandir}/man*/*
 %{perl_vendorlib}/Date
 %{_bindir}/*
