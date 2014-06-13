@@ -1,11 +1,12 @@
 %define upstream_name	 Date-Manip
-%define upstream_version 6.43
+%define upstream_version 6.45
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    2
+Release:    1
 
 Summary:	%{upstream_name} upstream_name for Perl
+
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
@@ -50,6 +51,7 @@ international times are all easily done.
 %{_mandir}/man*/*
 %{perl_vendorlib}/Date
 %{_bindir}/*
+
 
 
 
