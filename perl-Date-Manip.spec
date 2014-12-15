@@ -1,9 +1,9 @@
 %define upstream_name	 Date-Manip
-%define upstream_version 6.47
+%define upstream_version 6.48
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    4
+Release:    1
 
 Summary:	%{upstream_name} upstream_name for Perl
 
@@ -35,7 +35,7 @@ international times are all easily done.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Build.PL installdirs=vendor
+perl Build.PL installdirs=vendor
 ./Build
 
 %check
