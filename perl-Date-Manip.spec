@@ -1,27 +1,21 @@
 %define upstream_name	 Date-Manip
-%define upstream_version 6.48
+%define upstream_version 6.57
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    5
-
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	1
 Summary:	%{upstream_name} upstream_name for Perl
-
-
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:    http://www.cpan.org/modules/by-module/Date/%{upstream_name}-%{upstream_version}.tar.gz
-
-BuildRequires: perl(JSON::PP)
-BuildRequires: perl(Test::Inter)
-BuildRequires: perl(Test::Pod)
-BuildRequires: perl(Test::Pod::Coverage)
-BuildRequires: perl(YAML::Syck)
-BuildRequires: perl(Module::Build)
-
+Source0:	http://www.cpan.org/modules/by-module/Date/%{upstream_name}-%{upstream_version}.tar.gz
+BuildRequires:	perl(JSON::PP)
+BuildRequires:	perl(Test::Inter)
+BuildRequires:	perl(Test::Pod)
+BuildRequires:	perl(Test::Pod::Coverage)
+BuildRequires:	perl(YAML::Syck)
+BuildRequires:	perl(Module::Build)
 BuildArch:	noarch
-
 Obsoletes:	perl-DateManip < 5.46
 Provides:	perl-DateManip < 5.46
 
