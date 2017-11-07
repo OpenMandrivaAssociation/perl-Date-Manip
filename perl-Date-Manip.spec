@@ -36,7 +36,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 make test
 
 %install
-50 	%makeinstall_std
+%makeinstall_std
 
 %files
 %doc INSTALL README
