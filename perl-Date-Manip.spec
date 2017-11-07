@@ -1,5 +1,5 @@
 %define upstream_name	 Date-Manip
-%define upstream_version 6.57
+%define upstream_version 6.60
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -29,16 +29,14 @@ international times are all easily done.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-perl Build.PL installdirs=vendor
-./Build
+perl Makefile.PL INSTALLDIRS=vendor
+%make
 
 %check
-./Build test
+make test
 
 %install
-./Build install destdir=%{buildroot}
-
-%clean
+50 	%makeinstall_std
 
 %files
 %doc INSTALL README
