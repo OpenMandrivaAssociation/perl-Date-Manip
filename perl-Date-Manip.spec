@@ -1,7 +1,7 @@
 %define upstream_name	 Date-Manip
 
 Name:		perl-%{upstream_name}
-Version:	6.93
+Version:	6.94
 Release:	1
 Summary:	%{upstream_name} upstream_name for Perl
 License:	GPL+ or Artistic
