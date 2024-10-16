@@ -6,7 +6,7 @@ Release:	1
 Summary:	%{upstream_name} upstream_name for Perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
+Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Date/%{upstream_name}-%{version}.tar.gz
 BuildRequires:	perl(JSON::PP)
 BuildRequires:	perl(Test::Inter)
