@@ -8,6 +8,7 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Date/%{upstream_name}-%{version}.tar.gz
+BuildRequires:	make
 BuildRequires:	perl(JSON::PP)
 BuildRequires:	perl(Test::Inter)
 BuildRequires:	perl(Test::Pod)
