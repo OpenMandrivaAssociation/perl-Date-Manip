@@ -1,13 +1,13 @@
 %define upstream_name	 Date-Manip
 
 Name:		perl-%{upstream_name}
-Version:	6.95
+Version:	6.99
 Release:	1
 Summary:	%{upstream_name} upstream_name for Perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Date/%{upstream_name}-%{version}.tar.gz
+Url:		https://github.com/SBECK-github/Date-Manip
+Source0:	https://cpan.metacpan.org/authors/id/S/SB/SBECK/%{upstream_name}-%{version}.tar.gz
 BuildRequires:	make
 BuildRequires:	perl(JSON::PP)
 BuildRequires:	perl(Test::Inter)
